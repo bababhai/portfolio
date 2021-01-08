@@ -116,6 +116,34 @@
       padding: 12px 36px;
       margin-top: 20px;
       border-radius: 6px;
+      border: 2px solid crimson;
+      transition: all 0.3s ease;
+    }
+    & a:hover {
+      background: transparent;
+      color: crimson;
+    }
+  }
+}
+
+// about section styling
+.about {
+  padding: 100px 0;
+  font-family: "Poppins", sans-serif;
+
+  .title {
+    font-family: "Ubuntu", sans-serif;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+  }
+  .about-content {
+    .left img {
+      height: 400px;
+      width: 400px;
+      object-fit: cover;
     }
   }
 }
@@ -178,6 +206,10 @@
       .text-3 {
         font-size: 35px;
       }
+      a {
+        font-size: 23px;
+        padding: 10px 30px;
+      }
     }
   }
 }
@@ -195,6 +227,10 @@
       .text-3 {
         font-size: 30px;
       }
+      a {
+        font-size: 20px;
+        padding: 8px 20px;
+      }
     }
   }
 }
@@ -204,7 +240,7 @@
     padding: 0 23px;
   }
   .home {
-    background: url("../../content/images/banner.jpg") no-repeat -60em center;
+    background: url("../../content/images/banner.jpg") no-repeat center;
     background-attachment: fixed;
     background-size: cover;
     .home-content {

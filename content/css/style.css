@@ -134,6 +134,35 @@
   padding: 12px 36px;
   margin-top: 20px;
   border-radius: 6px;
+  border: 2px solid crimson;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.home .home-content a:hover {
+  background: transparent;
+  color: crimson;
+}
+
+.about {
+  padding: 100px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.about .title {
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+}
+
+.about .about-content .left img {
+  height: 400px;
+  width: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (max-width: 1004px) {
@@ -185,6 +214,10 @@
   .home .home-content .text-3 {
     font-size: 35px;
   }
+  .home .home-content a {
+    font-size: 23px;
+    padding: 10px 30px;
+  }
 }
 
 @media (max-width: 690px) {
@@ -197,6 +230,10 @@
   .home .home-content .text-3 {
     font-size: 30px;
   }
+  .home .home-content a {
+    font-size: 20px;
+    padding: 8px 20px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -204,7 +241,7 @@
     padding: 0 23px;
   }
   .home {
-    background: url("../../content/images/banner.jpg") no-repeat -60em center;
+    background: url("../../content/images/banner.jpg") no-repeat center;
     background-attachment: fixed;
     background-size: cover;
   }
