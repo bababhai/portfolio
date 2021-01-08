@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/* font-family: 'Poppins', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+/* font-family: 'Ubuntu', sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+/* navbar styling */
+.navbar {
+  position: fixed;
+  //   background: crimson;
+  width: 100%;
+  padding: 30px 0;
+  font-family: "Ubuntu", sans-serif;
+  transition: all 0.3s ease;
+  .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo a {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    span {
+      color: crimson;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .menu {
+    li {
+      list-style: none;
+      display: inline-block;
+      a {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 25px;
+        transition: color 0.3s ease;
+        &:hover {
+          color: crimson;
+        }
+      }
+    }
+  }
+  &.stickey {
+    background: crimson;
+    padding: 15px 0;
+    .menu li a:hover {
+      color: #fff;
+    }
+    .logo a span {
+      color: #fff;
+    }
+  }
+}
+
+// menu button styling
+.menu-btn {
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+/* home section styling */
+
+.home {
+  display: flex;
+  background: url("../../content/images/banner.jpg") no-repeat center;
+  height: 100vh;
+  color: #fff;
+  min-height: 500px;
+  font-family: "Ubuntu", sans-serif;
+  background-size: cover;
+  background-attachment: fixed;
+  .max-width {
+    margin: auto 0 auto 40px;
+  }
+
+  .home-content {
+    .text-1 {
+      font-size: 27px;
+    }
+
+    .text-2 {
+      font-size: 75px;
+      font-weight: 600;
+      margin-left: -3px;
+    }
+
+    .text-3 {
+      font-size: 27px;
+      margin: 5px 0;
+
+      span {
+        color: crimson;
+        font-weight: 500;
+      }
+    }
+    a {
+      display: inline-block;
+      background: crimson;
+      color: #fff;
+      font-size: 25px;
+      padding: 12px 36px;
+      margin-top: 20px;
+      border-radius: 6px;
+    }
+  }
+}
+
+// responsive media quiries start here
+
+@media (max-width: 1004px) {
+  .home {
+    .max-width {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .max-width {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 947px) {
+  .menu-btn {
+    z-index: 999;
+    display: block;
+    i.active:before {
+      content: "\f00d";
+    }
+  }
+  .navbar {
+    .menu {
+      position: fixed;
+      background: #000;
+      height: 100vh;
+      width: 100%;
+      left: -100%;
+      top: 0;
+      text-align: center;
+      padding-top: 80px;
+      transition: all 0.3s ease;
+      &.active {
+        left: 0;
+      }
+      li {
+        display: block;
+        a {
+          display: inline-block;
+          font-size: 25px;
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+
+  .home {
+    .home-content {
+      .text-2 {
+        font-size: 70px;
+      }
+
+      .text-3 {
+        font-size: 35px;
+      }
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  .max-width {
+    padding: 0 23px;
+  }
+  .home {
+    .home-content {
+      .text-2 {
+        font-size: 60px;
+      }
+
+      .text-3 {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .max-width {
+    padding: 0 23px;
+  }
+  .home {
+    background: url("../../content/images/banner.jpg") no-repeat -60em center;
+    background-attachment: fixed;
+    background-size: cover;
+    .home-content {
+      .text-2 {
+        font-size: 50px;
+      }
+
+      .text-3 {
+        font-size: 27px;
+      }
+    }
+  }
+}
