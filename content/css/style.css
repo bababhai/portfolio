@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   text-decoration: none;
 }
 
@@ -31,11 +31,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .navbar .logo a {
@@ -131,10 +131,9 @@
   background: crimson;
   color: #fff;
   font-size: 25px;
-  padding: 10px 30px;
+  padding: 12px 36px;
   margin-top: 20px;
   border-radius: 6px;
-  border: 2px solid crimson;
 }
 
 @media (max-width: 1004px) {
@@ -205,7 +204,7 @@
     padding: 0 23px;
   }
   .home {
-    background: url("../../content/images/banner.jpg") no-repeat center;
+    background: url("../../content/images/banner.jpg") no-repeat -60em center;
     background-attachment: fixed;
     background-size: cover;
   }
