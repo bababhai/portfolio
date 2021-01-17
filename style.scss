@@ -291,6 +291,11 @@ section {
     .column {
       width: calc(50% - 30px);
     }
+    .text {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
   }
 
   .title {
