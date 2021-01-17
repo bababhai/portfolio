@@ -127,9 +127,8 @@
   }
 }
 
-// about section styling
-.about,
-.services {
+//common styling
+section {
   padding: 100px 0;
   font-family: "Poppins", sans-serif;
 
@@ -154,7 +153,6 @@
     }
 
     &::after {
-      content: "who i m";
       position: absolute;
       background: #ffffff;
       bottom: -12px;
@@ -163,6 +161,19 @@
       font-size: 20px;
       color: crimson;
       transform: translateX(-50%);
+    }
+  }
+}
+
+// about section styling
+.about,
+.services,
+.skills {
+  font-family: "Poppins", sans-serif;
+
+  .title {
+    &::after {
+      content: "who i m";
     }
   }
   .about-content {
@@ -214,8 +225,85 @@
 }
 
 //service section styling START
+.services {
+  background: #111;
+  color: #fff;
+  .title {
+    &::before {
+      background: #fff;
+    }
+    &::after {
+      background: #111;
+      content: "what i provide";
+    }
+  }
 
+  .serv-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    .card {
+      width: calc(33% - 20px);
+      background: #222;
+      text-align: center;
+      border-radius: 6px;
+      padding: 20px 25px;
+      transition: all 0.3s ease;
+      &:hover {
+        background: crimson;
+        i {
+          color: #fff;
+        }
+      }
+      cursor: pointer;
+      i {
+        color: crimson;
+        font-size: 50px;
+        transition: color 1s ease;
+      }
+
+      .text {
+        font-size: 22px;
+        font-weight: 500;
+        margin: 10px 0 7px 0;
+      }
+      .box {
+        transition: all 0.3s ease;
+      }
+      &:hover .box {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
 //service section styling END
+
+//skills section styling START
+
+.skills {
+  .skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    .column {
+      width: calc(50% - 30px);
+    }
+  }
+
+  .title {
+    // &::before {
+    //   background: #fff;
+    // }
+    &::after {
+      content: "what i know";
+    }
+  }
+}
+
+//skills section styling END
 
 // responsive media quiries start here
 
@@ -310,6 +398,13 @@
       }
     }
   }
+
+  .services {
+    .serv-content .card {
+      width: calc(50% - 10px);
+      margin-bottom: 20px;
+    }
+  }
 }
 
 @media (max-width: 690px) {
@@ -329,6 +424,11 @@
         font-size: 20px;
         padding: 8px 20px;
       }
+    }
+  }
+  .services {
+    .serv-content .card {
+      width: 100%;
     }
   }
 }
