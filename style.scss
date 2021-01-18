@@ -291,10 +291,86 @@ section {
     .column {
       width: calc(50% - 30px);
     }
-    .text {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 10px;
+    .left {
+      .text {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      p {
+        text-align: justify;
+      }
+      a {
+        display: inline-block;
+        background: crimson;
+        color: #fff;
+        font-size: 18px;
+        padding: 8px 16px;
+        margin-top: 20px;
+        border-radius: 6px;
+        border: 2px solid crimson;
+        transition: all 0.3s ease;
+        &:hover {
+          color: crimson;
+          background: transparent;
+        }
+      }
+    }
+    .right {
+      .bars {
+        margin-bottom: 15px;
+      }
+      .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 5px;
+      }
+      span {
+        font-weight: 500;
+        font-size: 18px;
+      }
+      .line {
+        height: 5px;
+        width: 100%;
+        background: lightgray;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background: crimson;
+        }
+      }
+
+      .html {
+        &::before {
+          width: 90%;
+        }
+      }
+
+      .css {
+        &::before {
+          width: 60%;
+        }
+      }
+      .js {
+        &::before {
+          width: 80%;
+        }
+      }
+      .ReactJs {
+        &::before {
+          width: 50%;
+        }
+      }
+      .sql {
+        &::before {
+          width: 40%;
+        }
+      }
     }
   }
 
@@ -408,6 +484,12 @@ section {
     .serv-content .card {
       width: calc(50% - 10px);
       margin-bottom: 20px;
+    }
+  }
+  .skills {
+    .skills-content .column {
+      width: 100%;
+      margin-bottom: 35px;
     }
   }
 }
