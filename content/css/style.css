@@ -186,19 +186,22 @@ section .title::after {
 
 .about,
 .services,
-.skills {
+.skills,
+.teams {
   font-family: "Poppins", sans-serif;
 }
 
 .about .title::after,
 .services .title::after,
-.skills .title::after {
+.skills .title::after,
+.teams .title::after {
   content: "who i m";
 }
 
 .about .about-content,
 .services .about-content,
-.skills .about-content {
+.skills .about-content,
+.teams .about-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -214,13 +217,15 @@ section .title::after {
 
 .about .about-content .left,
 .services .about-content .left,
-.skills .about-content .left {
+.skills .about-content .left,
+.teams .about-content .left {
   width: 45%;
 }
 
 .about .about-content .left img,
 .services .about-content .left img,
-.skills .about-content .left img {
+.skills .about-content .left img,
+.teams .about-content .left img {
   height: 400px;
   width: 400px;
   -o-object-fit: cover;
@@ -230,13 +235,15 @@ section .title::after {
 
 .about .about-content .right,
 .services .about-content .right,
-.skills .about-content .right {
+.skills .about-content .right,
+.teams .about-content .right {
   width: 55%;
 }
 
 .about .about-content .right .text,
 .services .about-content .right .text,
-.skills .about-content .right .text {
+.skills .about-content .right .text,
+.teams .about-content .right .text {
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 10px;
@@ -244,19 +251,22 @@ section .title::after {
 
 .about .about-content .right .text span,
 .services .about-content .right .text span,
-.skills .about-content .right .text span {
+.skills .about-content .right .text span,
+.teams .about-content .right .text span {
   color: crimson;
 }
 
 .about .about-content .right p,
 .services .about-content .right p,
-.skills .about-content .right p {
+.skills .about-content .right p,
+.teams .about-content .right p {
   text-align: justify;
 }
 
 .about .about-content .right a,
 .services .about-content .right a,
-.skills .about-content .right a {
+.skills .about-content .right a,
+.teams .about-content .right a {
   display: inline-block;
   background: crimson;
   color: #fff;
@@ -271,26 +281,31 @@ section .title::after {
 
 .about .about-content .right a:hover,
 .services .about-content .right a:hover,
-.skills .about-content .right a:hover {
+.skills .about-content .right a:hover,
+.teams .about-content .right a:hover {
   color: crimson;
   background: transparent;
 }
 
-.services {
+.services,
+.teams {
   background: #111;
   color: #fff;
 }
 
-.services .title::before {
+.services .title::before,
+.teams .title::before {
   background: #fff;
 }
 
-.services .title::after {
+.services .title::after,
+.teams .title::after {
   background: #111;
   content: "what i provide";
 }
 
-.services .serv-content {
+.services .serv-content,
+.teams .serv-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -304,7 +319,8 @@ section .title::after {
           justify-content: space-between;
 }
 
-.services .serv-content .card {
+.services .serv-content .card,
+.teams .serv-content .card {
   width: calc(33% - 20px);
   background: #222;
   text-align: center;
@@ -315,33 +331,39 @@ section .title::after {
   cursor: pointer;
 }
 
-.services .serv-content .card:hover {
+.services .serv-content .card:hover,
+.teams .serv-content .card:hover {
   background: crimson;
 }
 
-.services .serv-content .card:hover i {
+.services .serv-content .card:hover i,
+.teams .serv-content .card:hover i {
   color: #fff;
 }
 
-.services .serv-content .card i {
+.services .serv-content .card i,
+.teams .serv-content .card i {
   color: crimson;
   font-size: 50px;
   -webkit-transition: color 1s ease;
   transition: color 1s ease;
 }
 
-.services .serv-content .card .text {
+.services .serv-content .card .text,
+.teams .serv-content .card .text {
   font-size: 22px;
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
 
-.services .serv-content .card .box {
+.services .serv-content .card .box,
+.teams .serv-content .card .box {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-.services .serv-content .card:hover .box {
+.services .serv-content .card:hover .box,
+.teams .serv-content .card:hover .box {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
@@ -452,6 +474,10 @@ section .title::after {
 
 .skills .title::after {
   content: "what i know";
+}
+
+.teams::after {
+  content: "who is with me";
 }
 
 @media (max-width: 1300px) {

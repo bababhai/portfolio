@@ -168,7 +168,8 @@ section {
 // about section styling
 .about,
 .services,
-.skills {
+.skills,
+.teams {
   font-family: "Poppins", sans-serif;
 
   .title {
@@ -225,7 +226,8 @@ section {
 }
 
 //service section styling START
-.services {
+.services,
+.teams {
   background: #111;
   color: #fff;
   .title {
@@ -385,6 +387,14 @@ section {
 }
 
 //skills section styling END
+
+//teamss section styling STARTS
+
+.teams::after {
+  content: "who is with me";
+}
+
+//teamss section styling END
 
 // responsive media quiries start here
 
