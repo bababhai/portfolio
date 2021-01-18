@@ -176,7 +176,8 @@ section {
 .about,
 .services,
 .skills,
-.teams {
+.teams,
+.contact {
   font-family: "Poppins", sans-serif;
 }
 .about-content {
@@ -461,6 +462,34 @@ section {
 }
 
 //teamss section styling END
+
+//contact section styling START
+.contact {
+  .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    .column {
+      width: (50% - 30px);
+    }
+    .left {
+      .text {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      p {
+        text-align: justify;
+      }
+    }
+  }
+  .title::after {
+    content: "get in touch";
+  }
+}
+//contact section styling END
 
 // responsive media quiries start here
 

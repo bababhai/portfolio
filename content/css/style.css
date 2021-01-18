@@ -191,7 +191,8 @@ section .title::after {
 .about,
 .services,
 .skills,
-.teams {
+.teams,
+.contact {
   font-family: "Poppins", sans-serif;
 }
 
@@ -532,6 +533,24 @@ section .title::after {
 .teams .owl-dot.active,
 .teams .owl-dot:hover {
   background: crimson;
+}
+
+.contact .contact-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact .title::after {
+  content: "get in touch";
 }
 
 @media (max-width: 1300px) {
