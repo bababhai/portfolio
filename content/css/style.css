@@ -549,8 +549,73 @@ section .title::after {
           justify-content: space-between;
 }
 
+.contact .contact-content .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 65px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .contact-content .row .info {
+  margin-left: 30px;
+}
+
+.contact .contact-content .row .info .head {
+  font-weight: 500;
+}
+
+.contact .contact-content .row .info .sub-title {
+  color: #333;
+}
+
+.contact .contact-content .row i {
+  font-size: 25px;
+  color: crimson;
+}
+
+.contact .contact-content .column {
+  width: calc(50% - 30px);
+}
+
+.contact .contact-content .left .icon {
+  margin: 10px 0;
+}
+
+.contact .contact-content .left .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact .contact-content .left p {
+  text-align: justify;
+}
+
 .contact .title::after {
   content: "get in touch";
+}
+
+.contact .right .form .fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact .right .form .fields .field {
+  height: 45px;
+  width: 100%;
+}
+
+.contact .right .form .fields .field input {
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
 }
 
 @media (max-width: 1300px) {

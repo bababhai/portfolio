@@ -471,10 +471,32 @@ section {
     align-items: center;
     justify-content: space-between;
 
+    .row {
+      display: flex;
+      height: 65px;
+      align-items: center;
+      .info {
+        margin-left: 30px;
+        .head {
+          font-weight: 500;
+        }
+        .sub-title {
+          color: #333;
+        }
+      }
+      i {
+        font-size: 25px;
+        color: crimson;
+      }
+    }
+
     .column {
-      width: (50% - 30px);
+      width: calc(50% - 30px);
     }
     .left {
+      .icon {
+        margin: 10px 0;
+      }
       .text {
         font-size: 20px;
         font-weight: 600;
@@ -487,6 +509,26 @@ section {
   }
   .title::after {
     content: "get in touch";
+  }
+
+  .right {
+    .form {
+      .fields {
+        display: flex;
+        .field {
+          height: 45px;
+          width: 100%;
+          input {
+            height: 100%;
+            width: 100%;
+            border: 1px solid lightgray;
+            border-radius: 6px;
+            outline: none;
+            padding: 0 15px;
+          }
+        }
+      }
+    }
   }
 }
 //contact section styling END
