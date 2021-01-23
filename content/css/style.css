@@ -573,9 +573,9 @@ footer {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -770,6 +770,7 @@ footer span a:hover {
     padding-top: 80px;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    overflow: scroll;
   }
   .navbar .menu.active {
     left: 0;
