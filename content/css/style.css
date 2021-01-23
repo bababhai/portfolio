@@ -10,6 +10,36 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-up-button {
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: crimson;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  z-index: 9999;
+  font-size: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.scroll-up-button.show {
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .max-width {
   max-width: 1300px;
   padding: 0 80px;
@@ -57,6 +87,7 @@
 }
 
 .navbar .menu li a {
+  display: block;
   color: #fff;
   font-size: 18px;
   font-weight: 500;
@@ -94,7 +125,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url("../../content/images/banner.jpg") no-repeat center;
+  background: url("../../content/images/banner2.jpg") no-repeat center;
   height: 100vh;
   color: #fff;
   min-height: 500px;
@@ -118,7 +149,7 @@
 }
 
 .home .home-content .text-3 {
-  font-size: 27px;
+  font-size: 40px;
   margin: 5px 0;
 }
 
@@ -192,7 +223,8 @@ section .title::after {
 .services,
 .skills,
 .teams,
-.contact {
+.contact,
+footer {
   font-family: "Poppins", sans-serif;
 }
 
@@ -580,17 +612,20 @@ section .title::after {
   width: calc(50% - 30px);
 }
 
-.contact .contact-content .left .icon {
+.contact .contact-content .left .icons,
+.contact .contact-content .right .icons {
   margin: 10px 0;
 }
 
-.contact .contact-content .left .text {
+.contact .contact-content .left .text,
+.contact .contact-content .right .text {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.contact .contact-content .left p {
+.contact .contact-content .left p,
+.contact .contact-content .right p {
   text-align: justify;
 }
 
@@ -598,24 +633,103 @@ section .title::after {
   content: "get in touch";
 }
 
-.contact .right .form .fields {
+.contact .right form .name {
+  margin-right: 10px;
+}
+
+.contact .right form .email {
+  margin-left: 10px;
+}
+
+.contact .right form .button {
+  height: 47px;
+  width: 147px;
+}
+
+.contact .right form .button button {
+  width: 100%;
+  height: 100%;
+  border: 2px crimson solid;
+  background: crimson;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.contact .right form .button button:hover {
+  color: crimson;
+  background: transparent;
+}
+
+.contact .right form .textarea textarea {
+  height: 80px !important;
+  width: 100%;
+  padding-top: 10px;
+  resize: none;
+}
+
+.contact .right form .field {
+  margin-bottom: 15px;
+}
+
+.contact .right form .field input,
+.contact .right form .field textarea {
+  height: 45px;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.contact .right form .fields {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.contact .right .form .fields .field {
+.contact .right form .fields .field {
   height: 45px;
   width: 100%;
 }
 
-.contact .right .form .fields .field input {
+.contact .right form .fields .field input {
   height: 100%;
   width: 100%;
   border: 1px solid lightgray;
   border-radius: 6px;
   outline: none;
   padding: 0 15px;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+footer {
+  background: #111;
+  padding: 20px 23px;
+  color: #fff;
+  text-align: center;
+}
+
+footer span a {
+  color: crimson;
+  text-decoration: none;
+}
+
+footer span a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 1300px) {
@@ -695,11 +809,22 @@ section .title::after {
         -ms-flex: 100%;
             flex: 100%;
   }
+  .about .about-content .right .text span:first-child {
+    display: table;
+    width: 100%;
+    height: 36px;
+  }
+  .about .about-content .right .text span:nth-child(2) {
+    display: none;
+  }
   .services .serv-content .card {
     width: calc(50% - 10px);
     margin-bottom: 20px;
   }
-  .skills .skills-content .column {
+  .skills .skills-content .column,
+  .skills .contact-content .column,
+  .contact .skills-content .column,
+  .contact .contact-content .column {
     width: 100%;
     margin-bottom: 35px;
   }
@@ -738,6 +863,14 @@ section .title::after {
   }
   .home .home-content .text-3 {
     font-size: 27px;
+  }
+  .about .about-content .right .text span:first-child {
+    display: table;
+    width: 100%;
+    height: 36px;
+  }
+  .about .about-content .right .text span:nth-child(2) {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

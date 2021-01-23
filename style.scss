@@ -9,6 +9,34 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-up-button {
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: crimson;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  z-index: 9999;
+  font-size: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  &.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
 .max-width {
   max-width: 1300px;
   padding: 0 80px;
@@ -44,6 +72,7 @@
       list-style: none;
       display: inline-block;
       a {
+        display: block;
         color: #fff;
         font-size: 18px;
         font-weight: 500;
@@ -78,7 +107,7 @@
 
 .home {
   display: flex;
-  background: url("../../content/images/banner.jpg") no-repeat center;
+  background: url("../../content/images/banner2.jpg") no-repeat center;
   height: 100vh;
   color: #fff;
   min-height: 500px;
@@ -101,7 +130,7 @@
     }
 
     .text-3 {
-      font-size: 27px;
+      font-size: 40px;
       margin: 5px 0;
 
       span {
@@ -177,7 +206,8 @@ section {
 .services,
 .skills,
 .teams,
-.contact {
+.contact,
+footer {
   font-family: "Poppins", sans-serif;
 }
 .about-content {
@@ -202,6 +232,7 @@ section {
       font-size: 25px;
       font-weight: 600;
       margin-bottom: 10px;
+
       span {
         color: crimson;
       }
@@ -493,8 +524,9 @@ section {
     .column {
       width: calc(50% - 30px);
     }
-    .left {
-      .icon {
+    .left,
+    .right {
+      .icons {
         margin: 10px 0;
       }
       .text {
@@ -512,12 +544,62 @@ section {
   }
 
   .right {
-    .form {
+    form {
+      .name {
+        margin-right: 10px;
+      }
+      .email {
+        margin-left: 10px;
+      }
+      .button {
+        height: 47px;
+        width: 147px;
+        button {
+          width: 100%;
+          height: 100%;
+          border: 2px crimson solid;
+          background: crimson;
+          color: #fff;
+          font-size: 20px;
+          font-weight: 500;
+          border-radius: 6px;
+          cursor: pointer;
+          font-size: 17px;
+          font-family: "Poppins", sans-serif;
+          transition: all 0.3s ease;
+          &:hover {
+            color: crimson;
+            background: transparent;
+          }
+        }
+      }
+      .textarea textarea {
+        height: 80px !important;
+        width: 100%;
+        padding-top: 10px;
+        resize: none;
+      }
+      .field {
+        margin-bottom: 15px;
+        input,
+        textarea {
+          height: 45px;
+          width: 100%;
+          border: 1px solid lightgray;
+          border-radius: 6px;
+          outline: none;
+          padding: 0 15px;
+          font-size: 17px;
+          font-family: "Poppins", sans-serif;
+          transition: all 0.3s ease;
+        }
+      }
       .fields {
         display: flex;
         .field {
           height: 45px;
           width: 100%;
+
           input {
             height: 100%;
             width: 100%;
@@ -525,6 +607,9 @@ section {
             border-radius: 6px;
             outline: none;
             padding: 0 15px;
+            font-size: 17px;
+            font-family: "Poppins", sans-serif;
+            transition: all 0.3s ease;
           }
         }
       }
@@ -532,6 +617,25 @@ section {
   }
 }
 //contact section styling END
+
+//footer section styling START
+
+footer {
+  background: #111;
+  padding: 20px 23px;
+  color: #fff;
+  text-align: center;
+}
+
+footer span a {
+  color: crimson;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+//footer section styling END
 
 // responsive media quiries start here
 
@@ -623,6 +727,19 @@ section {
       }
       .right {
         flex: 100%;
+        .text {
+          span {
+            &:first-child {
+              display: table;
+              width: 100%;
+              height: 36px;
+            }
+
+            &:nth-child(2) {
+              display: none;
+            }
+          }
+        }
       }
     }
   }
@@ -633,8 +750,10 @@ section {
       margin-bottom: 20px;
     }
   }
-  .skills {
-    .skills-content .column {
+  .skills,
+  .contact {
+    .skills-content .column,
+    .contact-content .column {
       width: 100%;
       margin-bottom: 35px;
     }
@@ -682,6 +801,25 @@ section {
 
       .text-3 {
         font-size: 27px;
+      }
+    }
+  }
+  .about {
+    .about-content {
+      .right {
+        .text {
+          span {
+            &:first-child {
+              display: table;
+              width: 100%;
+              height: 36px;
+            }
+
+            &:nth-child(2) {
+              display: none;
+            }
+          }
+        }
       }
     }
   }
